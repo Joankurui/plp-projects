@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhanced HTML5 form demonstrating semantic structure, accessibility, and validation">
+    <title>Enhanced HTML5 Form</title>
+</head>
+<body>
+    <header>
+        <h1>Customer Information Form</h1>
+        <p>Please fill out this form to create your account</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="form-instructions">
+            <h2 id="form-instructions">Form Instructions</h2>
+            <ol>
+                <li>Complete all required fields (marked with *)</li>
+                <li>Use proper format for email and phone number</li>
+                <li>Review your information before submitting</li>
+            </ol>
+        </section>
+
+        <form id="customer-form" action="/submit" method="post" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div>
+                    <label for="full-name">Full Name *</label>
+                    <input type="text" id="full-name" name="full-name" required 
+                           placeholder="John Smith" autocomplete="name">
+                </div>
+
+                <div>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="example@domain.com" autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </div>
+
+                <div>
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" max="2005-12-31">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <div>
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required
+                           placeholder="5-15 characters" minlength="5" maxlength="15">
+                </div>
+
+                <div>
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required
+                           placeholder="Minimum 8 characters" minlength="8"
+                           autocomplete="new-password">
+                </div>
+
+                <div>
+                    <label for="newsletter">Subscribe to newsletter:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div>
+                    <label for="country">Country *</label>
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Preferred Contact Method</label>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+                            <label for="contact-email">Email</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                            <label for="contact-phone">Phone</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="contact-none" name="contact-method" value="none">
+                            <label for="contact-none">No contact</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="4"
+                              placeholder="Enter any additional information here"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Readonly Example</legend>
+                <div>
+                    <label for="account-id">Account ID</label>
+                    <input type="text" id="account-id" name="account-id" 
+                           value="AUTO-GENERATED" readonly>
+                </div>
+            </fieldset>
+
+            <div>
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+
+        <section aria-labelledby="pricing-table">
+            <h2 id="pricing-table">Subscription Plans</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Features</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic</td>
+                        <td>
+                            <ul>
+                                <li>Standard support</li>
+                                <li>Limited features</li>
+                            </ul>
+                        </td>
+                        <td>$9.99/month</td>
+                    </tr>
+                    <tr>
+                        <td>Premium</td>
+                        <td>
+                            <ul>
+                                <li>Priority support</li>
+                                <li>All features</li>
+                            </ul>
+                        </td>
+                        <td>$19.99/month</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="media-example">
+            <h2 id="media-example">Product Demonstration</h2>
+            <figure>
+                <img src="product-demo.jpg" alt="Our product in use" width="400">
+                <figcaption>Example of our product being used in real-world scenario</figcaption>
+            </figure>
+            <video width="400" controls>
+                <source src="demo-video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Company Name. All rights reserved.</p>
+        <address>
+            Contact us at <a href="mailto:info@company.com">info@company.com</a>
+        </address>
+    </footer>
+</body>
+</html>
