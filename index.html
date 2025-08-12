@@ -1,126 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- SEO Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A sample HTML5 page demonstrating semantic structure, accessibility, and SEO best practices">
-    <meta name="keywords" content="HTML5, semantic web, accessibility, SEO, web development">
-    <meta name="author" content="Your Name">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="HTML5 Semantic Web Page">
-    <meta property="og:description" content="Demonstrating semantic structure, accessibility, and SEO">
-    <meta property="og:type" content="website">
-    
-    <title>HTML5 Semantic Web Page | Accessibility & SEO</title>
-    
-    <!-- Favicon (optional) -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>CSS Fundamentals Project</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Skip to Content Link for Accessibility -->
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    
-    <!-- Page Header -->
-    <header role="banner">
-        <h1>Welcome to Our Semantic Web Page</h1>
-        <p>Demonstrating HTML5, Accessibility, and SEO Best Practices</p>
-        
-        <!-- Primary Navigation -->
-        <nav role="navigation" aria-label="Main navigation">
-            <h2 class="visually-hidden">Main Navigation</h2>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="main-header">
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <!-- Main Content Area -->
-    <main id="main-content" role="main">
-        <!-- About Section -->
-        <section id="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">About Us</h2>
-            <p>We are a company dedicated to creating accessible, SEO-friendly websites using modern HTML5 standards.</p>
-            
-            <article>
-                <h3>Our History</h3>
-                <p>Founded in 2023, we've been at the forefront of semantic web development.</p>
-            </article>
-            
-            <article>
-                <h3>Our Team</h3>
-                <p>Meet our team of accessibility and SEO experts committed to web excellence.</p>
-            </article>
+    <main class="content">
+        <section class="intro-section">
+            <h2>About This Project</h2>
+            <p>This project demonstrates fundamental CSS concepts including selectors, the box model, and layout techniques.</p>
+            <div class="box-model-demo">
+                <p>This element showcases the CSS Box Model with margin, border, and padding.</p>
+            </div>
         </section>
         
-        <!-- Services Section -->
-        <section id="services" aria-labelledby="services-heading">
-            <h2 id="services-heading">Our Services</h2>
-            <ul>
-                <li>
-                    <h3>Semantic HTML Development</h3>
-                    <p>We build websites with proper HTML5 structure for better accessibility and SEO.</p>
-                </li>
-                <li>
-                    <h3>Accessibility Audits</h3>
-                    <p>We review your site for WCAG compliance and suggest improvements.</p>
-                </li>
-                <li>
-                    <h3>SEO Optimization</h3>
-                    <p>We help your content get discovered by search engines.</p>
-                </li>
-            </ul>
-        </section>
-        
-        <!-- Blog Preview Section -->
-        <section id="blog" aria-labelledby="blog-heading">
-            <h2 id="blog-heading">Latest Articles</h2>
-            
-            <article>
-                <h3><a href="/blog/semantic-html">The Importance of Semantic HTML</a></h3>
-                <p>Learn why using proper HTML5 elements matters for accessibility and SEO.</p>
-                <time datetime="2023-11-15">November 15, 2023</time>
+        <section class="features">
+            <article class="feature-card">
+                <h3>Selector Usage</h3>
+                <p>Proper implementation of element, class, and descendant selectors.</p>
             </article>
-            
-            <article>
-                <h3><a href="/blog/accessibility-tips">5 Quick Accessibility Wins</a></h3>
-                <p>Simple changes you can make today to improve your site's accessibility.</p>
-                <time datetime="2023-11-01">November 1, 2023</time>
+            <article class="feature-card">
+                <h3>Box Model</h3>
+                <p>Clear demonstration of margin, border, padding, and content.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Layout & Spacing</h3>
+                <p>Consistent spacing and sizing throughout the layout.</p>
             </article>
         </section>
     </main>
     
-    <!-- Aside Content - Related Info -->
-    <aside role="complementary" aria-labelledby="aside-heading">
-        <h2 id="aside-heading">Related Resources</h2>
-        <ul>
-            <li><a href="https://www.w3.org/WAI/" aria-label="Web Accessibility Initiative">WAI</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="MDN HTML Documentation">MDN HTML Docs</a></li>
-            <li><a href="https://www.w3.org/TR/html-aria/" aria-label="ARIA in HTML specification">ARIA in HTML</a></li>
-        </ul>
-    </aside>
-    
-    <!-- Page Footer -->
-    <footer role="contentinfo">
-        <h2 class="visually-hidden">Footer Information</h2>
-        
-        <section aria-labelledby="contact-heading">
-            <h3 id="contact-heading">Contact Us</h3>
-            <address>
-                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-                <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
-            </address>
-        </section>
-        
-        <section aria-labelledby="legal-heading">
-            <h3 id="legal-heading">Legal</h3>
-            <p><small>&copy; 2023 Semantic Web Company. All rights reserved.</small></p>
-            <p><small><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></small></p>
-        </section>
+    <footer class="main-footer">
+        <p>&copy; 2023 CSS Fundamentals Project. All rights reserved.</p>
     </footer>
 </body>
 </html>
