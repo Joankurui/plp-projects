@@ -1,0 +1,128 @@
+/* Base Styles (Mobile-First) */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --spacing: 1rem;
+    --border-radius: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/* Header - Flexbox Example */
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing);
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+/* Main Content */
+.main-container {
+    padding: var(--spacing);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing);
+    text-align: center;
+}
+
+/* Features Section - Flexbox Example */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.feature-card {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    flex: 1;
+}
+
+/* Gallery Section - Grid Example */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.gallery-item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing);
+}
+
+/* Media Queries for Responsiveness */
+/* Tablet (600px and up) */
+@media (min-width: 600px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .features {
+        flex-direction: row;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop (900px and up) */
+@media (min-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
